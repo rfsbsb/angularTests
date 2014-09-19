@@ -24,7 +24,7 @@
   app.controller('UsuarioEditarCtrl', ['$scope', '$routeParams', '$http', '$location', '$indexedDB', function($scope, $routeParams, $http, $location, $indexedDB){
     $scope.frmUsuario = {};
     $http.get("http://localhost:3000/usuarios/" + $routeParams.usuarioId + ".json").success(function(data){
-      // $scope.frmUsuario = data;
+      $scope.frmUsuario = data;
     });
     $scope.editar = function(form) {
       var dataObject = {
@@ -32,7 +32,7 @@
         idade: $scope.frmUsuario.idade,
         id: $scope.frmUsuario.id
       };
-      $http.put("http://localhost:3000/usuarios.json", dataObject).success(function(data){
+      $http.put("http://localhost:3000/usuarios/" + $routeParams.usuarioId + ".json", dataObject).success(function(data){
         $scope.usuarios = data;
         $location.path("/lista");
       });
