@@ -1,0 +1,20 @@
+CACHE MANIFEST
+js/angular-file-upload-html5-shim.min.js
+js/angular-file-upload.min.js
+js/angular-file-upload-shim.min.js
+js/angular.min.js
+js/angular-route.min.js
+js/app.js
+js/bootstrap.min.js
+js/pessoasController.js
+css/bootstrap.css
+css/bootstrap.css.map
+css/bootstrap.min.css
+css/bootstrap-theme.css
+css/bootstrap-theme.css.map
+css/bootstrap-theme.min.css
+css/custom.css
+fonts/glyphicons-halflings-regular.eot
+fonts/glyphicons-halflings-regular.svg
+fonts/glyphicons-halflings-regular.ttf
+fonts/glyphicons-halflings-regular.woff

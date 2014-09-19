@@ -1,0 +1,28 @@
+<h2>Lista de pessoas</h2>
+<table class="table table-condensed table-striped table-bordered">
+  <tr>
+    <th>Nome</th>
+    <th>Sexo</th>
+    <th>Idade</th>
+    <th>Nascimento</th>
+    <th>Ações</th>
+  </tr>
+  <tr ng-repeat="pessoa in pessoas">
+    <td>
+      <a href="#/pessoa/{{pessoa.id}}">{{pessoa.nome}}</a>
+    </td>
+    <td>
+      {{pessoa.sexo_formated}}
+    </td>
+    <td>
+      {{pessoa.idade}}
+    </td>
+    <td>
+      {{pessoa.nascimento}}
+    </td>
+    <td>
+      <a class="btn btn-primary" href="#/editar/{{pessoa.id}}">Editar</a>
+      <a class="btn btn-danger" href="#/remover/{{pessoa.id}}">Remover</a>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,38 @@
+body {
+  padding-top: 50px;
+}
+
+.bio {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-top: 50px;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+}
+
+.user-profile .photo {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.bio h3 {
+  margin: 10px 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.actions .box {
+  float: left;
+  width: 33.333%;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  text-align:  center;
+  padding: 10px;
+}
+
+.actions .box:last-child {
+  border-right: none;
+}

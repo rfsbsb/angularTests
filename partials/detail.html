@@ -1,0 +1,33 @@
+<h2>Perfil</h2>
+<div class="user-profile col-sm-4 col-md-4">
+  <div class="photo">
+    <img class="img-circle" ng-src="http://localhost:3000/{{pessoa.thumb_foto}}" />
+  </div>
+  <div class="bio">
+    <h3 class="name">
+      {{pessoa.nome}}
+    </h3>
+    <div class="info">
+      <dl class="dl-horizontal">
+        <dt>Sexo:</dt>
+        <dd>{{pessoa.sexo_formated}}</dd>
+        <dt>Idade:</dt>
+        <dd>{{pessoa.idade}}</dd>
+        <dt>Nascimento:</dt>
+        <dd>{{pessoa.nascimento}}</dd>
+      </dl>
+    </div>
+    <div class="actions">
+      <div class="box">
+        <a class="btn btn-default" href="#/list">Listar</a>
+      </div>
+      <div class="box">
+        <a class="btn btn-primary" href="#/editar/{{pessoa.id}}">Editar</a>
+      </div>
+      <div class="box">
+        <a class="btn btn-danger" href="#/remover/{{pessoa.id}}">Remover</a>
+      </div>
+    </div>
+
+  </div>
+</div>
