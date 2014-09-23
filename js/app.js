@@ -18,12 +18,26 @@
     otherwise({
       redirectTo: '/lista'
     });
-    // $indexedDBProvider.connection('pessoasDB').upgradeDatabase(1.3, function(event, db, tx){
-    //   var objStore = db.createObjectStore('pessoas', {keyPath: 'id'});
-    //   objStore.createIndex('nome_idx', 'nome', {unique: false});
-    //   objStore.createIndex('id_idx', 'id', {unique: false});
-    //   objStore.createIndex('idade_idx', 'idade', {unique: false});
-    // });
+    $indexedDBProvider.connection('BDUsuarios').upgradeDatabase(1, function(event, db, tx){
+      var objStore = db.createObjectStore('usuarios', {keyPath: 'id'});
+      objStore.createIndex('nome_idx', 'nome', {unique: false});
+      objStore.createIndex('idade_idx', 'idade', {unique: false});
+    });
   }]);
 
+  window.addEventListener('load', function() {
+    var status = $("#status");
+
+    function updateOnlineStatus(event) {
+      var condition = navigator.onLine ? "Online" : "Offline";
+      var className = navigator.onLine ? "badge alert-success" : "badge alert-danger";
+      $(status).attr("class", className);
+      $(status).html(condition);
+    }
+
+    window.addEventListener('online',  updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+  });
+
+  $(window).change();
 })();

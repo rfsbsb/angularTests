@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="pessoasApp" >
+<html lang="en" ng-app="pessoasApp" manifest="cache.manifest">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +53,7 @@
 
           <div class="form-group">
             <label for="idade">Idade</label>
-            <input ng-model="frmUsuario.idade" type="number" id="idade">
+            <input ng-model="frmUsuario.idade" class="form-control" type="number" id="idade">
           </div>
 
           <input type="submit" class="btn btn-success" value="Salvar"/>
@@ -72,7 +72,7 @@
 
           <div class="form-group">
             <label for="idade">Idade</label>
-            <input ng-model="frmUsuario.idade" type="number" id="idade">
+            <input ng-model="frmUsuario.idade" type="text" class="form-control" id="idade">
           </div>
 
           <input type="submit" class="btn btn-success" value="Salvar"/>
@@ -95,6 +95,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#lista">Listar</a></li>
             <li><a href="#novo">Novo</a></li>
+            <li><a><span id="status" class="badge alert-success">Online</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -106,7 +107,7 @@
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular-file-upload-html5-shim.min.js"></script>
